@@ -1,6 +1,6 @@
 server:
   # Eureka默认端口
-  port: 8761
+  port: 8762
 spring:
   application:
     name: eurekaServer

@@ -7,6 +7,7 @@
         <module>RoleInterface01</module>
         <module>RoleProvider01</module>
         <module>RoleConsumer01</module>
+        <module>EurekaServer02</module>
     </modules>
 
     <parent>

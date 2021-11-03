@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class RoleServiceImpl implements RoleService {
@@ -53,5 +54,10 @@ public class RoleServiceImpl implements RoleService {
         //返回对象
         Role role = restTemplate.getForObject(getServerInfo() + "/getRole", Role.class);
         return role;
+    }
+
+    @Override
+    public Map<String, Object> getAll() {
+        return null;
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 @Service
@@ -25,5 +26,10 @@ public class RoleServiceImpl implements RoleService {
         list.add(weapon2);
         role.setWeaponList(list);
         return role;
+    }
+
+    @Override
+    public Map<String, Object> getAll() {
+        return null;
     }
 }

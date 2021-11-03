@@ -1,0 +1,22 @@
+server:
+  # Eureka默认端口
+  port: 8761
+spring:
+  application:
+    name: eurekaServer
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  server:
+    #关闭自我保护模式：失效服务直接剔除
+    enable-self-preservation: false
+    #扫描失效服务间隔（缺省为60s）
+    eviction-interval-timer-in-ms: 1000
+  client:
+    #是否在其他注册中心注册
+    register-with-eureka: false
+    #是否在其他注册中心拉取服务
+    fetch-registry: false
+    service-url:
+      #注册中心访问地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka

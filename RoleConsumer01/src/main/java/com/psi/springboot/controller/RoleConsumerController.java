@@ -29,7 +29,7 @@ public class RoleConsumerController {
         return roleService.getRole();
     }
 
-    @RequestMapping("roleBalance")
+    @RequestMapping("/roleBalance")
     public Role roleBalance() {
         return roleLoadBalance.getRole();
     }

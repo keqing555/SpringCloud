@@ -13,24 +13,15 @@ import org.springframework.web.client.RestTemplate;
  * 根据负载均衡调用远程服务
  */
 @Service
-public class RoleLoadBalance implements RoleService {
+public class RoleRibbon implements RoleService {
     /**
-     * 远程调用客户端
+     * 远程调用客户端，集成Ribbon
      */
     @Autowired
     private RestTemplate restTemplate;
 
-    /**
-     * 支持负载均衡的调用客户端
-     */
-    @Autowired
-    private LoadBalancerClient loadBalancerClient;
-
     public String getServerUrl() {
-        ServiceInstance roleProvider = loadBalancerClient.choose("ROLEPROVIDER");
-        String host = roleProvider.getHost();
-        int port = roleProvider.getPort();
-        return "http://" + host + ":" + port;
+        return "http://ROLEPROVIDER";
     }
 
     @Override

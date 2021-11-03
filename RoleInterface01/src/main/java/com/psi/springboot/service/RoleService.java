@@ -6,5 +6,5 @@ import java.util.Map;
 
 public interface RoleService {
     public Role getRole();
-    public Map<String,Object> getAll();
+
 }

@@ -19,4 +19,4 @@ eureka:
     fetch-registry: true
     service-url:
       #注册中心访问地址，指向另一台EurekaServer
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+      defaultZone: http://${eureka.instance.hostname}:8762/eureka

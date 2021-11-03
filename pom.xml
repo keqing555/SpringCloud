@@ -8,6 +8,8 @@
         <module>RoleProvider01</module>
         <module>RoleConsumer01</module>
         <module>EurekaServer02</module>
+        <module>RoleProvider02</module>
+        <module>RoleWeb</module>
     </modules>
 
     <parent>

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class RoleServiceImpl implements RoleService {
+public class RoleServiceImpl2 implements RoleService {
     /**
      * 根据服务名称查询服务信息
      */
@@ -32,7 +32,7 @@ public class RoleServiceImpl implements RoleService {
      * @return
      */
     public String getServerInfo() {
-        List<ServiceInstance> roleProvider01 = discoveryClient.getInstances("ROLEPROVIDER01");
+        List<ServiceInstance> roleProvider01 = discoveryClient.getInstances("ROLEPROVIDER");
         //该服务集群只有一个服务，获取第一个
         if (roleProvider01 != null && roleProvider01.size() > 0) {
             ServiceInstance serviceInstance = roleProvider01.get(0);
@@ -56,8 +56,5 @@ public class RoleServiceImpl implements RoleService {
         return role;
     }
 
-    @Override
-    public Map<String, Object> getAll() {
-        return null;
-    }
+
 }

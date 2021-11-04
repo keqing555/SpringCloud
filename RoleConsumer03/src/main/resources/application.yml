@@ -1,0 +1,20 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: RoleConsumer03
+#  cloud:
+#    loadbalancer:
+#      retry:
+#        enabled: true #开启Spring Cloud的Retry功能
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka
+
+#设置指定包日志级别
+logging:
+  level:
+    com:
+      psi:
+        springboot: debug

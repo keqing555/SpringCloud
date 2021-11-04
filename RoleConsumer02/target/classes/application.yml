@@ -18,9 +18,9 @@ ROLEPROVIDER: #服务名称
     #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #随机策略
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #轮循，只有这个策略支持重试功能
     OkToRetryAllOperatrons: true #是否对所有操作都重试
-    ConnectioTimeout: 250     #Ribbon连接超时时间
-    ReadTimeout: 1000       #Ribbon读取数据超时时间
-    MaxAutoReties: 2        #对当前实例重试次数
+    ConnectioTimeout: 2000     #Ribbon连接超时时间
+    ReadTimeout: 2000       #Ribbon读取数据超时时间
+    MaxAutoReties: 1        #对当前实例重试次数
     MaxAutoRetriesNextServer: 1   #切换实例的重试次数
 
 

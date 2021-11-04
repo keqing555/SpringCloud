@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: RoleConsumer
+    name: RoleConsumer01
 eureka:
   client:
     service-url:

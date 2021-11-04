@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class RoleRibbon implements RoleService {
     /**
-     * 远程调用客户端，集成Ribbon
+     * 远程调用客户端，集成Ribbon（客户端负载均衡器）
      */
     @Autowired
     private RestTemplate restTemplate;

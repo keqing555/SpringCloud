@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>RoleConsumer02</artifactId>
+    <artifactId>RoleConsumer03</artifactId>
 
     <dependencies>
         <!--引入interface模块-->
@@ -35,6 +35,11 @@
         <dependency>
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
+        </dependency>
+        <!--添加Feign客户端，Fegin整合Ribbon及Eureka，支持负载均衡-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 

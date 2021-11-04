@@ -13,7 +13,7 @@ public class RestTemplateConfig {
      * @return
      */
     @Bean
-    @LoadBalanced   //开启Ribbon
+    @LoadBalanced   //开启Ribbon（客户端负载均衡器）
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

@@ -9,8 +9,8 @@
         <module>RoleConsumer01</module>
         <module>EurekaServer02</module>
         <module>RoleProvider02</module>
-        <module>RoleWeb</module>
         <module>RoleConsumer02</module>
+        <module>RoleConsumer03</module>
     </modules>
 
     <parent>

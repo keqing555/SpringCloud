@@ -11,6 +11,7 @@
         <module>RoleProvider02</module>
         <module>RoleConsumer02</module>
         <module>RoleConsumer03</module>
+        <module>Hystrix-Dashboard</module>
     </modules>
 
     <parent>

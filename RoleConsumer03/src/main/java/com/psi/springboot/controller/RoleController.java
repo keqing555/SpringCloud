@@ -1,10 +1,9 @@
 package com.psi.springboot.controller;
 
 import com.psi.springboot.pojo.Role;
-import com.psi.springboot.service.RoleService;
+import com.psi.springboot.service.RoleService03;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -12,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class RoleController {
     //Feign接口
     @Autowired
-    private RoleService roleService;
+    private RoleService03 roleService;
 
-    @GetMapping("/getRole")
-    public Role getRole() {
-        return roleService.getRole();
+    @GetMapping("/getFeign")
+    public Role getRole03() {
+        return roleService.getRole03();
     }
 }

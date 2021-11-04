@@ -18,3 +18,8 @@ logging:
     com:
       psi:
         springboot: debug
+
+#Feign集成Hystrix，默认关闭
+feign:
+  hystrix:
+    enabled: true

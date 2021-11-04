@@ -1,5 +1,6 @@
 package com.psi.springboot.service.impl;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.psi.springboot.pojo.Role;
 import com.psi.springboot.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,21 @@ public class RoleRibbon implements RoleService {
     }
 
     @Override
+    //访问超时（默认1s），执行回滚方法
+    @HystrixCommand(fallbackMethod = "getRoleRollback")
     public Role getRole() {
         String url = getServerUrl();
         Role role = restTemplate.getForObject(url + "/getRole", Role.class);
         return role;
+    }
+
+    /**
+     * 熔断器触发调用方法
+     * 返回值类型必须和断路方法保持一致
+     *
+     * @return
+     */
+    public Role getRoleRollback() {
+        return new Role(1, "熔断触发，方法回滚", null);
     }
 }
